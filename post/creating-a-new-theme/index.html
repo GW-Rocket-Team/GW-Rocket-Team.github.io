@@ -1010,7 +1010,7 @@ $ cat public/index.html
     <h1><a href="http://localhost:1313/post/first-post/">first</a></h1>
 <script>document.write('<script src="http://'
         + (location.host || 'localhost').split(':')[0]
-        + ':1313/livereload.js?mindelay=10"></'
+		+ ':1313/livereload.js?mindelay=10"></'
         + 'script>')</script></body>
 </html>
 
@@ -1049,8 +1049,8 @@ $ find public -name '*.html' | xargs ls -l
 <p>Knowing that hugo is using the slug to generate the file name, the simplest solution is to change the slug. Let&rsquo;s do it the hard way and change the permalink in the configuration file.</p>
 $ vi config.toml
 [permalinks]
-    page = "/:title/"
-    about = "/:filename/"
+	page = "/:title/"
+	about = "/:filename/"
 
 <p>Generate the web site and verify that this didn&rsquo;t work. Hugo lets &ldquo;slug&rdquo; or &ldquo;URL&rdquo; override the permalinks setting in the configuration file. Go ahead and comment out the slug in content/about.md, then generate the web site to get it to be created in the right place.</p>
 
@@ -1067,7 +1067,7 @@ $ vi themes/zafta/layouts/partials/header.html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ .Title }}</title>
+	<title>{{ .Title }}</title>
 </head>
 <body>
 :wq
