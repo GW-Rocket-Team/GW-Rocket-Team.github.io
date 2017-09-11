@@ -16,7 +16,6 @@ enableRobotsTXT = true # Suggested, enable robots.txt file
     authorbox = true
     author = "Some Guy"
     post_navigation = false
-    alert = "Subscribe to my [programming blog's](https://shadow53.com) RSS feed to be notified of updates to this theme."
 
 [Params.widgets]
     search = true
