@@ -12,9 +12,9 @@ enableRobotsTXT = true # Suggested, enable robots.txt file
 
 [Params]
     tagline = "Achieving new heights, one rocket at a time."
-    description = "The official example website for the BluestNight Hugo theme. Comes with documentation." # Description of your site
+    description = "GW Rocket" # Description of your site
     authorbox = true
-    author = "Some Guy"
+    author = "Adrian Haber"
     post_navigation = false
 
 [Params.widgets]
