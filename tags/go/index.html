@@ -1,299 +1,481 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
+
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Go</title>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Go</title>
+  <meta name="author" content="" />
 
-    
-    <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/" />
-    <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com/" />
-    <link rel="dns-prefetch" href="https://unpkg.com/" />
-    <link rel="preconnect" href="https://unpkg.com/" />
-    
-    <link rel="prefetch" href="https://unpkg.com/lunr/lunr.js" />
-    <link rel="prefetch" href="https://GW-Rocket-Team.github.io/js/search.min.js" />
-    <link rel="prefetch" href="https://GW-Rocket-Team.github.io/index.json" />
-    <meta name="description" itemprop="description" content="The official example website for the BluestNight Hugo theme. Comes with documentation." id="desc"><meta name="generator" content="Hugo 0.25.1" /><link rel="canonical" href="https://GW-Rocket-Team.github.io/tags/go/">
-
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="prefetch stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    
-    <link rel="prefetch stylesheet" type="text/css" href="https://GW-Rocket-Team.github.io/styles.css">
-
-    <script>var _paq = undefined;</script></head>
-  <body itemscope itemtype="http://schema.org/WebPage">
-    <div id="site-container">
-      <div id="site-header">
-        <header class="small-text-center medium-text-left">
-          <a href="https://GW-Rocket-Team.github.io/">
-            <span id="site-title" itemprop="name">GW Rocket Team</span>
-            <br/><span id="site-tagline">Achieving new heights, one rocket at a time.</span>
-          </a>
-        </header>
-        <label for="menu-toggle-box"><div id="menu-toggle" class="main-nav no-select"><span><span class="fa fa-bars"></span> MENU</span></div></label>
-        <input type="checkbox" id="menu-toggle-box" class="hide"/>
-        <nav id="main-nav">
-          <ul class="menu"><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-documentation" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/" >
-      <span>DOCUMENTATION</span><label for="nav-documentation">
-        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
-      </label></a><ul>
-    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-example-configs" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/example-configs/" >
-      <span>EXAMPLE CONFIGS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-pages" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/pages/" >
-      <span>PAGES</span><label for="nav-pages">
-        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
-      </label></a><ul>
-    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-alert" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/site/alert/#page-specific-alerts" >
-      <span>ALERT</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-authorbox" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/pages/authorbox/" >
-      <span>AUTHORBOX</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-comments" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/pages/comments/" >
-      <span>COMMENTS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-customize-list-pages" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/pages/custom-list-pages/" >
-      <span>CUSTOMIZE LIST PAGES</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-netlify-forms" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/pages/netlify-forms/" >
-      <span>NETLIFY FORMS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-page-navigation" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/pages/next-prev-page/" >
-      <span>PAGE NAVIGATION</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-responsive-tables" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/pages/responsive-tables/" >
-      <span>RESPONSIVE TABLES</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-summaries" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/pages/summaries/" >
-      <span>SUMMARIES</span></a></li>
-    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-shortcodes" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/shortcodes/" >
-      <span>SHORTCODES</span><label for="nav-shortcodes">
-        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
-      </label></a><ul>
-    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-alert" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/site/alert/#shortcode" >
-      <span>ALERT</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-handwriting-fonts" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/shortcodes/handwriting/" >
-      <span>HANDWRITING FONTS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-link-to-static-files" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/shortcodes/static/" >
-      <span>LINK TO STATIC FILES</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-members" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/shortcodes/members/" >
-      <span>MEMBERS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-responsive-tables" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/pages/responsive-tables/" >
-      <span>RESPONSIVE TABLES</span></a></li>
-    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-sidebar" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/sidebar/" >
-      <span>SIDEBAR</span><label for="nav-sidebar">
-        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
-      </label></a><ul>
-    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-category-list" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/sidebar/category-list/" >
-      <span>CATEGORY LIST</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-events" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/sidebar/events/" >
-      <span>EVENTS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-patreon-banner" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/sidebar/patreon-banner/" >
-      <span>PATREON BANNER</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-recent-posts" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/sidebar/recent-posts/" >
-      <span>RECENT POSTS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-search" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/sidebar/search/" >
-      <span>SEARCH</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-tag-list" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/sidebar/tag-list/" >
-      <span>TAG LIST</span></a></li>
-    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-site" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/site/" >
-      <span>SITE</span><label for="nav-site">
-        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
-      </label></a><ul>
-    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-alert" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/site/alert/" >
-      <span>ALERT</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-analytics" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/site/analytics/" >
-      <span>ANALYTICS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-appearance" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/site/appearance/" >
-      <span>APPEARANCE</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-social-icons" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/docs/site/social-icons/" >
-      <span>SOCIAL ICONS</span></a></li>
-    </ul></li>
-    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-survey" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/survey/" >
-      <span>SURVEY</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-tutorials" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/#" >
-      <span>TUTORIALS</span><label for="nav-tutorials">
-        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
-      </label></a><ul>
-    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-creating-a-new-theme" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/post/creating-a-new-theme/" >
-      <span>CREATING A NEW THEME</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-migrate-to-hugo-from-jekyll" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/post/migrate-from-jekyll/" >
-      <span>MIGRATE TO HUGO FROM JEKYLL</span></a></li>
-    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-about-hugo" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="https://GW-Rocket-Team.github.io/about/" >
-      <span>ABOUT HUGO</span></a></li></ul>
-        </nav>
-      </div>
-      <div id="main-container" class="row" role="main" itemprop="mainContentOfPage">
-        
-        
-        
-  <main id="post-list" class="row-item small-full medium-two-thirds"><header id="page-header">
-			<h1 id="page-title">Tag: Go</h1>
-		</header><article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting"><div>
-    <header class="post-list-title">
-      <a href="https://GW-Rocket-Team.github.io/post/goisforlovers/">
-        <h2 itemprop="headline">(Hu)go Template Primer</h2>
-      </a><div class="metadata">
-        <span class="fa fa-clock-o"></span>
-        <time datetime="2014-04-02" itemprop="datePublished">April 02, 2014</time>
-      </div></header>
-    <div class="post-list-summary" itemprop="description">
-      <p>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates. This document is a brief primer on using go templates. <a href="https://GW-Rocket-Team.github.io/post/goisforlovers/">[Read more...]</a></p>
-    </div>
-  </div>
-</article>
-<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting"><div>
-    <header class="post-list-title">
-      <a href="https://GW-Rocket-Team.github.io/post/hugoisforlovers/">
-        <h2 itemprop="headline">Getting Started with Hugo</h2>
-      </a><div class="metadata">
-        <span class="fa fa-clock-o"></span>
-        <time datetime="2014-04-02" itemprop="datePublished">April 02, 2014</time>
-      </div></header>
-    <div class="post-list-summary" itemprop="description">
-      <p>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture. Save it somewhere specific as we will be using it in the next step. More complete instructions are available at installing hugo Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now. Follow the following steps: Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313 Corresponding pseudo commands: <a href="https://GW-Rocket-Team.github.io/post/hugoisforlovers/">[Read more...]</a></p>
-    </div>
-  </div>
-</article>
-</main>
-        <aside class="row-item small-full medium-third right" itemscope itemtype="http://schema.org/WPSideBar">
-  <div class="widget">
-	<header><span class="widget-header"><span class="fa fa-credit-card"></span> Support Me On</span>
-	</header>
-	<a href="https://patreon.com/shadow53"><img id="patreon-banner" src="https://GW-Rocket-Team.github.io/images/patreon/patreon_white.svg" alt="Patreon Banner" title="Support me on Patreon!" />
-  </a>
-</div>
-  <div class="widget" id="search-container">
-  <header>
-		<span class="widget-header"><span class="fa fa-search"></span> Search</span>
-	</header>
-	<input type="search" name="search" id="searchbox" placeholder="Search..." autocomplete="off"/>
-  <div id="search-results" class="hide"></div>
-</div>
-	<div class="widget">
-	<header>
-		<span class="widget-header"><span class="fa fa-pencil"></span> <a href="https://GW-Rocket-Team.github.io/post/">Recent Posts</a></span>
-	</header>
-	
-	<a class="widget-header-small button" href="https://GW-Rocket-Team.github.io/index.xml"><span class="fa fa-rss"></span> Subscribe to the Site</a>
-	<a class="widget-header-small button" href="https://GW-Rocket-Team.github.io/tags/go/index.xml"><span class="fa fa-rss"></span> Subscribe to Go</a><ul><li><a href="https://GW-Rocket-Team.github.io/post/creating-a-new-theme/">Creating a New Theme</a></li><li><a href="https://GW-Rocket-Team.github.io/post/goisforlovers/">(Hu)go Template Primer</a></li><li><a href="https://GW-Rocket-Team.github.io/post/hugoisforlovers/">Getting Started with Hugo</a></li><li><a href="https://GW-Rocket-Team.github.io/post/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a></li></ul>
-</div>
   
-	<div class="widget">
-	<header>
-		<span class="widget-header"><span class="fa fa-folder"></span> <a href="https://GW-Rocket-Team.github.io/categories/">Categories</a></span>
-	</header>
-	<ul><li><a href="https://GW-Rocket-Team.github.io/categories/documentation">Documentation</a></li>
-		<li><a href="https://GW-Rocket-Team.github.io/categories/development">Development</a></li>
-		<li><a href="https://GW-Rocket-Team.github.io/categories/golang">Golang</a></li>
-		
-	</ul>
-</div>
-	<div class="widget">
-	<header>
-		<span class="widget-header"><span class="fa fa-tags"></span> <a href="https://GW-Rocket-Team.github.io/tags/">Tags</a></span>
-	</header>
-	<div><a class="button" href="https://GW-Rocket-Team.github.io/tags/development" title="development">
-				development (2)
-			</a><a class="button" href="https://GW-Rocket-Team.github.io/tags/go" title="go">
-				go (2)
-			</a><a class="button" href="https://GW-Rocket-Team.github.io/tags/golang" title="golang">
-				golang (2)
-			</a><a class="button" href="https://GW-Rocket-Team.github.io/tags/hugo" title="hugo">
-				hugo (1)
-			</a><a class="button" href="https://GW-Rocket-Team.github.io/tags/templates" title="templates">
-				templates (1)
-			</a><a class="button" href="https://GW-Rocket-Team.github.io/tags/themes" title="themes">
-				themes (1)
-			</a></div>
-</div>
-</aside>
+  <meta name="keywords" content="devows, hugo, go">	
+  
 
-      </div>
-      <footer class="row">
-        <div class="small-full medium-half row-item small-text-center medium-text-left medium-left">
-          <small>
-            &copy; 2017
-            <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-              <span itemprop="name">GW Rocket Team</span>
-            </span>
-          </small>
+  
+  <meta name="description" content="Site template made by devcows using hugo">	
+  
+
+  <meta name="generator" content="Hugo 0.25.1" />
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="https://GW-Rocket-Team.github.iocss/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="https://GW-Rocket-Team.github.iocss/style.red.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+
+  
+  <link href="https://GW-Rocket-Team.github.iocss/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="https://GW-Rocket-Team.github.ioimg/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://GW-Rocket-Team.github.ioimg/apple-touch-icon.png" />
+  
+
+  <link href="https://GW-Rocket-Team.github.iocss/owl.carousel.css" rel="stylesheet">
+  <link href="https://GW-Rocket-Team.github.iocss/owl.theme.css" rel="stylesheet">
+
+  <link rel="alternate" href="https://GW-Rocket-Team.github.io/index.xml" type="application/rss+xml" title="GW Rocket Team">
+
+  
+  <meta property="og:title" content="Go" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/tags/go//" />
+  <meta property="og:image" content="img/logo.png" />
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="https://GW-Rocket-Team.github.io">
+                    <img src="https://GW-Rocket-Team.github.ioimg/logo.png" alt="Go logo" class="hidden-xs hidden-sm">
+                    <img src="https://GW-Rocket-Team.github.ioimg/logo-small.png" alt="Go logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Go - go to homepage</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">Toggle Navigation</span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">Home</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/blog/">Blog</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">FAQ</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">Contact</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Go</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    
+
+                    <div class="col-md-9" id="blog-listing-medium">
+
+                        
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="https://GW-Rocket-Team.github.io/blog/2015/09/17/go-is-for-lovers/">
+                                          
+                                          <img src="https://GW-Rocket-Team.github.ioimg/banners/banner-2.jpg" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="https://GW-Rocket-Team.github.io/blog/2015/09/17/go-is-for-lovers/">Go is for lovers</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          
+                                          
+                                          in <a href="https://GW-Rocket-Team.github.iocategories/programming">programming</a>
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="https://GW-Rocket-Team.github.io/blog/2015/09/17/go-is-for-lovers/"><i class="fa fa-calendar-o"></i> September 17, 2015</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
+This document is a brief primer on using go templates.</p>
+                                    <p class="read-more"><a href="https://GW-Rocket-Team.github.io/blog/2015/09/17/go-is-for-lovers/" class="btn btn-template-main">Continue reading</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+
+                        <ul class="pager">
+                            
+                            <li class="previous disabled"><a href="#">&larr; Newer</a></li>
+                            
+
+                            
+                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">Search</h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="Search">
+                <input type="hidden" name="sitesearch" value="https://GW-Rocket-Team.github.io">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">Categories</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            <li><a href="https://GW-Rocket-Team.github.iocategories/lorem">lorem (1)</a>
+            </li>
+            
+            <li><a href="https://GW-Rocket-Team.github.iocategories/programming">programming (2)</a>
+            </li>
+            
+            <li><a href="https://GW-Rocket-Team.github.iocategories/pseudo">pseudo (1)</a>
+            </li>
+            
+            <li><a href="https://GW-Rocket-Team.github.iocategories/starting">starting (1)</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+      <h3 class="panel-title">Tags</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            <li><a href="https://GW-Rocket-Team.github.iotags/go"><i class="fa fa-tags"></i> go</a>
+            </li>
+            
+            <li><a href="https://GW-Rocket-Team.github.iotags/golang"><i class="fa fa-tags"></i> golang</a>
+            </li>
+            
+            <li><a href="https://GW-Rocket-Team.github.iotags/hugo"><i class="fa fa-tags"></i> hugo</a>
+            </li>
+            
+            <li><a href="https://GW-Rocket-Team.github.iotags/ipsum"><i class="fa fa-tags"></i> ipsum</a>
+            </li>
+            
+            <li><a href="https://GW-Rocket-Team.github.iotags/programming"><i class="fa fa-tags"></i> programming</a>
+            </li>
+            
+            <li><a href="https://GW-Rocket-Team.github.iotags/theme"><i class="fa fa-tags"></i> theme</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+            </div>
+            
         </div>
         
-        <div class="small-full medium-half row-item small-text-center medium-text-right" id="social-icons">
-          
-          
-          
-          <a href="https://gitlab.com/Shadow53/BluestNight" rel="me nofollow">
-            <span class="fa fa-gitlab"></span>
-          </a>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>About us</h4>
+
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
         </div>
-      </footer>
-    </div><script src="https://unpkg.com/lunr/lunr.js"></script>
-    <script src="https://GW-Rocket-Team.github.io/js/search.js" type="text/javascript"></script>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4>Recent posts</h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://GW-Rocket-Team.github.io/blog/2015/10/10/migrate-from-jekyll/">
+                          
+                            <img src="https://GW-Rocket-Team.github.ioimg/banners/banner-5.jpg" class="img-responsive" alt="Migrate from Jekyll">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://GW-Rocket-Team.github.io/blog/2015/10/10/migrate-from-jekyll/">Migrate from Jekyll</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://GW-Rocket-Team.github.io/blog/2015/10/02/linked-post/">
+                          
+                            <img src="https://GW-Rocket-Team.github.ioimg/banners/banner-4.jpg" class="img-responsive" alt="Linked post">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://GW-Rocket-Team.github.io/blog/2015/10/02/linked-post/">Linked post</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="https://GW-Rocket-Team.github.io/blog/2015/09/17/go-is-for-lovers/">
+                          
+                            <img src="https://GW-Rocket-Team.github.ioimg/banners/banner-2.jpg" class="img-responsive" alt="Go is for lovers">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="https://GW-Rocket-Team.github.io/blog/2015/09/17/go-is-for-lovers/">Go is for lovers</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>Contact</h4>
+
+            <strong>Universal Ltd.</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br>45Y 73J
+        <br>England
+        <br>
+        <strong>Great Britain</strong>
+      </p>
+      
+
+
+            <a href="/contact" class="btn btn-small btn-template-main">Go to contact page</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
     
-    <script>
-      var lunrIndex = undefined;
-      loadIndex("https:\/\/GW-Rocket-Team.github.io\/index.json").then(
-        function(index) { lunrIndex = index; },
-        function(status){}
-      );
-    </script></body>
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright (c) 2017, GW Rocket Team; all rights reserved.</p>
+            
+            <p class="pull-right">
+              Template by <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              
+
+              Ported to Hugo by <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y&v=3.exp"></script>
+
+<script src="https://GW-Rocket-Team.github.iojs/hpneo.gmaps.js"></script>
+<script src="https://GW-Rocket-Team.github.iojs/gmaps.init.js"></script>
+<script src="https://GW-Rocket-Team.github.iojs/front.js"></script>
+
+
+<script src="https://GW-Rocket-Team.github.iojs/owl.carousel.min.js"></script>
+
+
+  </body>
 </html>
