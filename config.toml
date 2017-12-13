@@ -1,4 +1,4 @@
-baseurl = "https://gw-rocket-team.github.io"
+baseurl = "https://gw-rocket-team.github.io/"
 title = "GW Rocket Team"
 theme = "hugo-universal-theme"
 themesDir = "./themes"
