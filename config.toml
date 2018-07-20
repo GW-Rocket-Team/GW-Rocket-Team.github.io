@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://GW-Rocket-Team.github.io/"
 languageCode = "en-us"
 title = "Navigator | Responsive Multipurpose Bootstrap Hugo Template"
 theme = "navigator-hugo"
