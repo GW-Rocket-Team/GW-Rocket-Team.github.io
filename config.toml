@@ -1,6 +1,6 @@
 baseURL = "https://GW-Rocket-Team.github.io/"
 languageCode = "en-us"
-title = "Navigator | Responsive Multipurpose Bootstrap Hugo Template"
+title = "GW Rocket Team | Vwwoosh"
 theme = "navigator-hugo"
 
 # We Used Themefisher Icon font for Icon, for more details check this github repository - https://github.com/themefisher/themefisher-font
@@ -13,11 +13,11 @@ theme = "navigator-hugo"
         url     = "/about"
         weight  = 2
     [[menu.nav]]
-        name    = "Service"
+        name    = "Interest"
         url     = "/service"
         weight  = 3
     [[menu.nav]]
-        name    = "Portfolio"
+        name    = "Projects"
         url     = "/portfolio"
         weight  = 4
     [[menu.nav]]
@@ -28,18 +28,18 @@ theme = "navigator-hugo"
         name    = "Contact"
         url     = "/contact"
         weight  = 6
-    
+
     # Footer Service Menu
     [[menu.service]]
-        name    = "Graphic Design"
+        name    = "Mechanical"
         url     = "/service"
         weight  = 1
     [[menu.service]]
-        name    = "Web Design"
+        name    = "Electrical"
         url     = "/service"
         weight  = 2
     [[menu.service]]
-        name    = "Web Development"
+        name    = "Software"
         url     = "/service"
         weight  = 3
 
@@ -57,7 +57,7 @@ theme = "navigator-hugo"
         url     = "/about"
         weight  = 3
     [[menu.quicklink]]
-        name    = "Badges"
+        name    = "Awards"
         url     = "/about"
         weight  = 4
 
@@ -71,10 +71,10 @@ theme = "navigator-hugo"
     # Hero Area Section
     [params.hero]
         enable  = true
-        heading = "We love to make brands grow"
-        description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quo dolor est incidunt suscipit minima, alias numquam voluptatum rerum porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore at laboriosam unde repellat id expedita quae quisquam libero officia consequatur."
+        heading = "We build things that go mach speed."
+        description = "We are The George Washington University's student-led Rocket Team. Every year, we build a rocket for the IREC competition."
         button  = true
-        btnText = "Know More"
+        btnText = "Learn More"
         btnURL  = "https://themefisher.com/"
         videoThumb = "images/slider/video-player-thumb.jpg"
         videoURL   = "https://www.youtube.com/embed/g3-VxLQO7do"
@@ -97,7 +97,7 @@ theme = "navigator-hugo"
         enable  = true
         bg      = "images/call-to-action/call-to-action-bg-2.jpg"
         title   = "Let's Create Something Together"
-        subtitle= "Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit."
+        subtitle= "Interested in rocketry or just looking for a way to apply your skills?"
         btnText = "Contact Us"
 
     # Contact Section
