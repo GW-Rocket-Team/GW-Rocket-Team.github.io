@@ -207,7 +207,7 @@
 			// 		//re enable the submit button by removing attribute disabled and change the text back to Send The Message
 			// 		$('#contact-submit').removeAttr('disabled').attr('value', 'Send The Message');
 			// 	}
-			});
+			// });
 		}
 	});
 
