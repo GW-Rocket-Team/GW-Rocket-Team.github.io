@@ -827,7 +827,7 @@ a:focus, a:hover {
   border: 1px solid #dedede;
   box-shadow: none;
   height: 45px !important;
-  color: #fff;
+  color: #000;
   height: 38px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;

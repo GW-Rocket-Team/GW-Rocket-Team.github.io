@@ -21,13 +21,9 @@ theme = "navigator-hugo"
         url     = "/portfolio"
         weight  = 4
     [[menu.nav]]
-        name    = "Blog"
-        url     = "/blog"
-        weight  = 5
-    [[menu.nav]]
         name    = "Contact"
         url     = "/contact"
-        weight  = 6
+        weight  = 5
 
     # Footer Service Menu
     [[menu.service]]
@@ -53,8 +49,8 @@ theme = "navigator-hugo"
         url     = "/about"
         weight  = 2
     [[menu.quicklink]]
-        name    = "FAQ's"
-        url     = "/about"
+        name    = "Blog"
+        url     = "/blog"
         weight  = 3
     [[menu.quicklink]]
         name    = "Awards"
