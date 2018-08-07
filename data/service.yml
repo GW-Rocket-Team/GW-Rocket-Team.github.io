@@ -1,28 +1,27 @@
 enable    : true
-topTitle  : A LIST OF SERVICES
-title     : Our Service.
-subtitle  : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!
+topTitle  : A LIST OF AREAS OF INTEREST
+title     : Our Interests.
+subtitle  : We like working on a lot of things.
 item      :
-  - icon  : tf-ion-ios-copy-outline
-    title : Branding
+  - icon  : tf-ion-ios-gear-outline
+    title : Mechanical
     list  :
-      - name : Brand Strategy  
-      - name : Advertising / Campaigns  
-      - name : Product Design
-      - name : Video / Photography
+      - name : Manufacturing
+      - name : CAD
+      - name : System Integration
 
-  - icon  : tf-ion-ios-alarm-outline
-    title : Branding
+  - icon  : tf-ion-ios-bolt-outline
+    title : Electrical
     list  :
-      - name : Web Design
-      - name : E- Commerce Site Design
-      - name : App Development
-      - name : Mobile UI Design
+      - name : Soldering
+      - name : PCB Design
+      - name : Power Distribution
+      - name :
 
-  - icon  : tf-ion-ios-book-outline
-    title : IOS App Development
+  - icon  : tf-ion-ios-folder-outline
+    title : Software
     list  :
-      - name : Game Development
-      - name : Game Design
-      - name : Social Media Marketing
-      - name : Mobile UI Design
+      - name : Embedded Development
+      - name : C++
+      - name : Control Systems
+      - name :
